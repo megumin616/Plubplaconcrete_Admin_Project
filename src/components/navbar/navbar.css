@@ -1,0 +1,102 @@
+:root {
+    --color-bg: rgb(95, 166, 247);
+}
+.section-navbar {
+    /* display: flex; */
+    background: var(--color-bg);
+    width: 20vw;
+    position: relative;
+    z-index: 999;
+}
+.nav-setgroup1 {
+    width: auto;
+    height: 100vh;
+    color: white;
+}
+.group1-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 100vh;
+    width: auto;
+}
+.group1-logo {
+    margin: 1.4rem 0;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+.menu-list-dashboard {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.menu-list-dashboard h2 {
+    margin-left: 1rem;
+}
+
+.menu-list-adddata-head {
+    display: flex;
+    margin-top: 1.5rem;
+}
+.menu-list-adddata-menu {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.menu-list-adddata {
+    margin-left: 1rem;
+    font-size: 28px;
+}
+.menu-list-adddata h2 {
+    margin-left: 1rem;
+}
+
+.menu-list-menage {
+    margin-left: 1rem;
+    font-size: 28px;
+}
+.menu-list-menage .menu-list-adddata-head h2 {
+    margin-left: 1rem;
+}
+
+
+.nav-setgroup1 {
+    /* position: relative;
+    z-index: 999; */
+}
+.nav-setgroup2 {
+    background: linear-gradient(to right, var(--color-bg) 40%, rgb(207, 232, 255));
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 998;
+    display: flex;
+    text-align: end;
+    align-items: center;
+}
+.nav-setgroup2 .nav-group1-logo {
+    /* width: 5rem; */
+}
+.nav-admin {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.nav-admin p {
+    font-size: 24px;
+    margin: 2rem;
+}
+.nav-admin button {
+    margin: 2rem;
+    background: rgb(254, 106, 106);
+    border-radius: 25px;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    width: 5.6rem;
+    height: 2rem;
+}
