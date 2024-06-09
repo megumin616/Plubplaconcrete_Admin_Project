@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import NavTap from "../../components/navbar/NavTap";
+import './dashboard.css'
 
 export default function Dashboard() {
   return (
@@ -9,7 +10,7 @@ export default function Dashboard() {
       <Navbar />
       <NavTap/>
        <div className="dashboard-content" style={{width: "80vw"}}>
-       <h2>Dashboard</h2>
+       <h2>Analytics</h2>
        </div>
       </div>
     </>

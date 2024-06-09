@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "../navbar/navbar.css";
 
 // icons
-import icon1 from "../../assets/images/icons/icon-add-data.png";
-import icon2 from "../../assets/images/icons/icon-menage-data.png";
-import icon3 from "../../assets/images/icons/icon-dashboard.png";
+import icon1 from "../../assets/images/icons/icons8-add-properties-100.png";
+import icon2 from "../../assets/images/icons/icons8-edit-property-100.png";
+import icon3 from "../../assets/images/icons/icons8-graph-100.png";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
             <div className="group1-menu-list">
               <div className="menu-list-dashboard">
                 <img src={icon3} />
-                <h2><Link className="hover:text-yellow-300 transition ease-in-out delay-100" to="/dashboard">หน้าสรุปผล</Link></h2>
+                <a href="https://marketingplatform.google.com/home?authuser=0" target="_blank" className="hover:text-yellow-300 transition ease-in-out delay-100">Analytics</a>
               </div>
 
               <div className="menu-list-adddata">

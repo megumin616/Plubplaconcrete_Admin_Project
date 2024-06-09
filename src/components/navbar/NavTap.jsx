@@ -2,21 +2,42 @@ import React, { useState, useEffect } from "react";
 import "../navbar/navbar.css";
 import { auth, db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
+import logo from '../../assets/images/logo/พลับพลาคอนกรีตLogo.png'
 
 export default function NavTap() {
   const [userDetail, setUserDetail] = useState(null);
 
   //ดึงข้อมูลผู้ที่ login มาแสดง
+  // const fetchUserData = async () => {
+  //   auth.onAuthStateChanged(async (user) => {
+  //     console.log(user);
+  //     const docRef = doc(db, "UserAdmin", user.uid);
+  //     const docSnap = await getDoc(docRef);
+  //     if (docSnap.exists()) {
+  //       setUserDetail(docSnap.data());
+  //       console.log(docSnap.data());
+  //     } else {
+  //       console.log("User is not logged in");
+  //       window.location.href = "/login";
+  //     }
+  //   } );
+  // };
+
+  //ส่วนนี้จะเพิ่มการตรวจสอบว่า ถ้าไม่ได้มีการ Login เข้ามา จะให้กลับไปหน้า login
   const fetchUserData = async () => {
     auth.onAuthStateChanged(async (user) => {
-      console.log(user);
-      const docRef = doc(db, "UserAdmin", user.uid);
-      const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        setUserDetail(docSnap.data());
-        console.log(docSnap.data());
+      if (user) {
+        const docRef = doc(db, "UserAdmin", user.uid);
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          setUserDetail(docSnap.data());
+          console.log(docSnap.data());
+        } else {
+          console.log("User data does not exist");
+        }
       } else {
         console.log("User is not logged in");
+        window.location.href = "/login";
       }
     });
   };
@@ -38,13 +59,14 @@ export default function NavTap() {
     <>
       <div className="nav-setgroup2">
         <div className="group1-logo">
-          <h3>logo</h3>
+          <img src={logo} style={{borderRadius: "15px"}}/>
         </div>
         <div className="nav-admin">
           {userDetail ? (
             <p>{userDetail.firstName + "  " + userDetail.lastName}</p>
           ) : (
             <p>กำลังโหลดหน้า Admin</p>
+            
           )}
           <button onClick={handleLogout}>Logout</button>
         </div>

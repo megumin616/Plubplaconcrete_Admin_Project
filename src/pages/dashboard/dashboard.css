@@ -1,0 +1,9 @@
+.dashboard-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+.dashboard-content h2 {
+    font-size: 100px;
+}

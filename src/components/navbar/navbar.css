@@ -6,7 +6,7 @@
     background: var(--color-bg);
     width: 20vw;
     position: relative;
-    z-index: 999;
+    z-index: 996;
 }
 .nav-setgroup1 {
     width: auto;
@@ -33,6 +33,11 @@
     margin-top: 1rem;
     margin-left: 1rem;
 }
+.menu-list-dashboard img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.5rem;
+}
 .menu-list-dashboard h2 {
     margin-left: 1rem;
 }
@@ -40,6 +45,10 @@
 .menu-list-adddata-head {
     display: flex;
     margin-top: 1.5rem;
+}
+.menu-list-adddata-head img {
+    width: 50px;
+    height: 50px;
 }
 .menu-list-adddata-menu {
     display: flex;
@@ -69,6 +78,7 @@
 }
 .nav-setgroup2 {
     background: linear-gradient(to right, var(--color-bg) 40%, rgb(207, 232, 255));
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.566);
     position: absolute;
     top: 0;
     width: 100%;

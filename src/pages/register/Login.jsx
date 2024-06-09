@@ -13,7 +13,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       console.log("User logged in Successfully");
-      window.location.href = "/dashboard";
+      window.location.href = "/menageproduct";
     } catch (error) {
       console.log(error);
     }
