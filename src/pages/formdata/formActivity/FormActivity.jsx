@@ -166,9 +166,9 @@ export default function FormActivity() {
       >
         <Navbar />
         <NavTap />
-        <div className="dashboard-content" style={{ width: "80vw" }}>
-          <div class="bg-gray-100 h-full">
-            <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="dashboard-content" style={{ width: "80vw", height: "100vh"}}>
+          <div class="bg-gray-100">
+            {/* <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8"> */}
               <div class="">
                 <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-4 w-full">
                   <form class="space-y-4">
@@ -239,7 +239,7 @@ export default function FormActivity() {
                   </form>
                 </div>
               </div>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>

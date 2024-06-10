@@ -5,6 +5,7 @@
     /* display: flex; */
     background: var(--color-bg);
     width: 20vw;
+    height: 100vh;
     position: relative;
     z-index: 996;
 }
